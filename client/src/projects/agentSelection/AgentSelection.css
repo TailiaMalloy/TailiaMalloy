@@ -1,0 +1,786 @@
+/* App Css */
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .WaitingRoom {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .waiting-container {
+    flex: 1;
+    display: flex;
+    padding:50px;
+    background-color: lightgray;
+  }
+  
+  /* Main CSS */
+  
+  .main-container {
+    flex: 1;
+    display: flex;
+    padding:50px;
+  }
+  
+  .p {
+    font-size: 100px;
+  }
+  
+  /* Content CSS */
+  
+  .content-panel {
+    flex: 4;
+    padding: 10px;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    min-width: 600px;
+  }
+  
+  /* Timer CSS */
+  .timer-container {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ccc; /* Optional: Divider line */
+    margin-top: 20px;
+  }
+  
+  /* Chat CSS */
+  .enable-audio {
+    width: 45%
+  }
+  
+  .enable-video {
+    width: 45%
+  }
+  
+  .chat-status {
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #555;
+  }
+  
+  .chat-panel {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 500px;
+    max-width: 500px;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;     /* Enables vertical scrolling */
+    overflow-x: hidden;   /* Disables horizontal scrolling */
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 355px; 
+    max-height: 355px;
+    height: 95%;
+    min-width:450px;
+    max-width:450px;
+  }
+  
+  .chat-input {
+    display: flex;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .chat-input button {
+    padding: 10px 15px;
+    margin-left: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .chat-input button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Slider CSS */
+  
+  .slider-container {
+    display: flex;
+    flex-direction: column; /* Arrange value above slider and button */
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Full width */
+    height:100%;
+    padding: 0px;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  .slider-value {
+    font-size: 24px; /* Larger value display */
+    font-weight: bold;
+    margin-bottom: 0px; /* Space between value and slider/button */
+    margin-left: 0px;
+    text-align: center;
+    color: #4caf50; /* Green color for emphasis */
+    margin: 0;
+  }
+  
+  .slider-row {
+    display: flex; /* Arrange slider and button horizontally */
+    align-items: center; /* Center-align slider and button */
+    justify-content: center; /* Space elements evenly */
+    width: 100%;
+  }
+  
+  .slider {
+    flex: 1; /* Slider takes up remaining horizontal space */
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    appearance: none;
+    margin-right: 10px; /* Space between slider and button */
+  }
+  
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+  }
+  
+  .slider-submit {
+    padding: 2px 10px; /* Larger button size */
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px; /* Larger text */
+  }
+  
+  .slider-submit:hover {
+    background-color: #45a049;
+  }
+  
+  .slider-label {
+    font-size: 18px;
+  }
+  
+  /* Offer CSS */
+  
+  .offer-notification {
+    font-size: 16px;
+    margin-bottom:0;
+  }
+  
+  .offer-container {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal alignment */
+    align-items: center;
+    justify-content: space-around;
+    height: 150px; /* Adjust as needed */
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .offer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%; /* Adjust width for each section */
+    height: 90%;
+    border: 1px solid #ddd;
+    padding: 2px;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .offer-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .offer-submit {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .offer-submit:hover {
+    background-color: #45a049;
+  }
+  
+  /* Alert CSS */
+    .alert-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000; /* Ensure it floats above all other elements */
+    }
+    
+    .alert-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .alert-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    
+    .alert-confirm {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .alert-confirm:hover {
+      background-color: #45a049;
+    }
+    
+    .alert-cancel {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .alert-cancel:hover {
+      background-color: #e53935;
+    }
+  /* Main Page */
+  
+  .chat-panel{
+    border: 2px solid grey;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 95%; 
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-panel{
+    border: 2px solid grey;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 95%; 
+  }
+  
+  .slider-form{
+    position: 'fixed'; 
+    bottom: 0;
+    width: '100%';
+    background: orange;
+    margin-top: auto;
+  }
+  
+  .pdf-container{
+    width:"100%" ;
+    height:"550vh";
+  }
+  
+  html, body {
+    overflow: auto;
+  }
+  
+  .hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  /* client/src/components/QuizPage.css */
+  
+  .quiz-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .quiz-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .quiz-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quiz-question {
+    margin-bottom: 20px;
+  }
+  
+  .quiz-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .quiz-option {
+    margin-bottom: 5px;
+  }
+  
+  .quiz-option input {
+    margin-right: 10px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  .quiz-submit-button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .quiz-submit-button:hover {
+    background-color: #218838;
+  }
+  
+  /* client/src/components/QuestionnairePage.css */
+  
+  .questionnaire-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  }
+  
+  .questionnaire-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  }
+  
+  .questionnaire-form {
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .questionnaire-question {
+  margin-bottom: 20px;
+  }
+  
+  .questionnaire-input {
+  margin-top: 10px;
+  }
+  
+  .questionnaire-input textarea {
+  width: 100%;
+  padding: 10px;
+  resize: vertical;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  }
+  
+  .rating-options,
+  .radio-options {
+  display: flex;
+  gap: 10px;
+  }
+  
+  .rating-options label,
+  .radio-options label {
+  display: flex;
+  align-items: center;
+  }
+  
+  .rating-options input,
+  .radio-options input {
+  margin-right: 5px;
+  }
+  
+  .error {
+  color: red;
+  font-size: 0.9em;
+  }
+  
+  .questionnaire-submit-button {
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  }
+  
+  .questionnaire-submit-button:hover {
+  background-color: #218838;
+  }
+  
+  /* client/src/components/ThankYouPage.css */
+  
+  .thankyou-container {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  }
+  
+  .thankyou-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  }
+  
+  .thankyou-container p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  }
+  
+  /* client/src/components/LandingPage.css */
+  /* client/src/components/InfoPage.css */
+  
+  /* client/src/components/ContentPanel.css */
+  .chat-notification {
+  background-color: #fffae6;
+  border: 1px solid #ffd700;
+  color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  }
+  
+  .content-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  }
+  
+  .document-buttons {
+  display: flex;
+  margin-bottom: 20px;
+  }
+  
+  .document-button {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  
+  .document-button:last-child {
+  margin-right: 0;
+  }
+  
+  .document-button.active {
+  background-color: #6c63ff;
+  color: #fff;
+  }
+  
+  .document-button:hover {
+  background-color: #bdbdbd;
+  }
+  
+  .pdf-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  .pdf-navigation {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  }
+  
+  .pdf-navigation p {
+  margin: 0 10px 0 0;
+  }
+  
+  .pdf-navigation button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  
+  .pdf-navigation button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  }
+  
+  .pdf-navigation button:hover:not(:disabled) {
+  background-color: #574dcf;
+  }
+  
+  .info-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  }
+  
+  .info-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  }
+  
+  .info-content {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  }
+  
+  .info-acknowledgment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  }
+  
+  .info-acknowledgment label {
+  display: flex;
+  align-items: center;
+  }
+  
+  .info-acknowledgment input[type='checkbox'] {
+  margin-right: 10px;
+  }
+  
+  .error {
+  color: red;
+  font-size: 0.9em;
+  margin-left: 10px;
+  }
+  
+  .proceed-button {
+  padding: 12px;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  }
+  
+  .proceed-button:hover {
+  background-color: #0056b3;
+  }
+  
+  .landing-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  }
+  
+  .landing-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  }
+  
+  .landing-form .form-group {
+  margin-bottom: 20px;
+  }
+  
+  .landing-form label {
+  display: block;
+  margin-bottom: 5px;
+  }
+  
+  .landing-form input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  }
+  
+  .landing-form .terms {
+  display: flex;
+  align-items: center;
+  }
+  
+  .landing-form .terms input[type='checkbox'] {
+  margin-right: 10px;
+  }
+  
+  .landing-form .terms label {
+  margin: 0;
+  }
+  
+  .landing-form .error {
+  color: red;
+  font-size: 0.9em;
+  }
+  
+  .landing-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  
+  .landing-form button:hover {
+  background-color: #0056b3;
+  }
+  
+  .landing-form a {
+  color: #007bff;
+  text-decoration: none;
+  }
+  
+  .landing-form a:hover {
+  text-decoration: underline;
+  }
+  
+  .audio {
+    height: 50px;
+    width: 200px;
+  }
+  
+  .audio-label {
+    vertical-align: middle;
+  }
+  
+  .video {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* MarkdownContainer.css */
+  .markdown-container {
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .markdown-container h1, .markdown-container h2, .markdown-container h3 {
+    color: #007bff;
+  }
+  
+  .markdown-container a {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  .markdown-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .markdown-container code {
+    background: #e8e8e8;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .markdown-container pre {
+    background: #e8e8e8;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  .markdown-container ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+  }
+  
